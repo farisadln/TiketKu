@@ -39,12 +39,12 @@
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:src="@drawable/emblemwhite"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view" />
 
@@ -52,9 +52,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="48dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="@font/mregular"
@@ -65,17 +65,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="274dp"
+        android:id="@+id/btn_sign_in"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="48dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/bg_btn_blueprimary"
         android:fontFamily="@font/mmedium"
@@ -89,12 +88,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="274dp"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="48dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="48dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/bg_btn_white_primary"
         android:fontFamily="@font/mmedium"
@@ -104,7 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
 
 
 </android.support.constraint.ConstraintLayout>
