@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterOneActivity"></activity>
+        <activity android:name=".SuccessRegisterActivity"></activity>
+        <activity android:name=".RegisterTwoActivity" />
+        <activity android:name=".RegisterOneActivity" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".GetStartedActivity" />
         <activity android:name=".SplashActivity">

@@ -27,7 +27,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="@font/mregular"
-        android:text="Create New Account"
+        android:text="Selfie Time"
         android:textColor="#FFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:fontFamily="@font/mlight"
-        android:text="Please fill up the forms below \n for information"
+        android:text="Let the world knows yourself \nmore better and ever"
         android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="20sp"
@@ -73,6 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <LinearLayout
+            android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -84,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mlight"
-                android:text="@string/username_label"
+                android:text="@string/name_label"
                 android:textColor="@color/grayPrimary"
                 android:textSize="20sp" />
 
@@ -111,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mlight"
-                android:text="@string/password_label"
+                android:text="@string/bio_label"
                 android:textColor="@color/grayPrimary"
                 android:textSize="20sp" />
 
@@ -120,41 +121,60 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
                 android:fontFamily="@font/mmedium"
-                android:inputType="textPassword"
+                android:inputType="text"
                 android:lines="1"
                 android:paddingLeft="12dp"
                 android:textColor="@color/blackPrimary" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginBottom="24dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mlight"
-                android:text="@string/email_label"
-                android:textColor="@color/grayPrimary"
-                android:textSize="20sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input_edit"
-                android:fontFamily="@font/mmedium"
-                android:inputType="textPassword"
-                android:lines="1"
-                android:paddingLeft="12dp"
-                android:textColor="@color/blackPrimary" />
-        </LinearLayout>
 
 
     </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bg_view_circle_picture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/icon_nopic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginRight="152dp"
+        android:background="@drawable/bg_btn_plus_blue"
+        android:fontFamily="@font/mmedium"
+        android:text="+"
+        android:textColor="#FFF"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
 
     <Button
         android:id="@+id/btn_continue"
@@ -173,7 +193,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btn_back"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        />
 
     <LinearLayout
         android:id="@+id/btn_back"
@@ -191,7 +212,8 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="28dp"
-            android:src="@drawable/ic_back" />
+            android:src="@drawable/ic_back"
+            />
 
     </LinearLayout>
 
