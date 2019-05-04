@@ -110,6 +110,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/btn_new_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -117,7 +118,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:fontFamily="@font/mmedium"
+        android:fontFamily="@font/mlight"
         android:text="Create New Account"
         android:textColor="#FFF"
         android:textSize="22sp"
