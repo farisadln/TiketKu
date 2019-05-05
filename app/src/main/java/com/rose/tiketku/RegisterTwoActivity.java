@@ -99,6 +99,7 @@ public class RegisterTwoActivity extends AppCompatActivity {
                                     reference.getRef().child("url_photo_profile").setValue(uri_photo);
                                     reference.getRef().child("nama_lengkap").setValue(nama_lengkap.getText().toString());
                                     reference.getRef().child("bio").setValue(bio.getText().toString());
+                                    
                                 }
                             }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
