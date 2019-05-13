@@ -80,6 +80,9 @@ public class RegisterTwoActivity extends AppCompatActivity {
         btn_continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_continue.setEnabled(false);
+                btn_continue.setText("Loading ...");
+
 //                 Set firebase
                 reference = FirebaseDatabase.getInstance().getReference()
                         .child("Users").child(username_key_new);
@@ -99,7 +102,7 @@ public class RegisterTwoActivity extends AppCompatActivity {
                                     reference.getRef().child("url_photo_profile").setValue(uri_photo);
                                     reference.getRef().child("nama_lengkap").setValue(nama_lengkap.getText().toString());
                                     reference.getRef().child("bio").setValue(bio.getText().toString());
-                                    
+
                                 }
                             }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
