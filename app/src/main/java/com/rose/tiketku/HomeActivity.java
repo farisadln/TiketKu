@@ -81,7 +81,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gopissaticket = new Intent(HomeActivity.this, TicketDetailActivity.class);
-                gopissaticket.putExtra("jenis_tiket", "Pissa");
+                gopissaticket.putExtra("jenis_tiket", "Pisa");
                 startActivity(gopissaticket);
             }
         });
@@ -90,7 +90,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gopisaticket = new Intent(HomeActivity.this,TicketDetailActivity.class);
-                gopisaticket.putExtra("jenis_tiket", "Torri");
+                gopisaticket.putExtra("jenis_tiket", "Tori");
                 startActivity(gopisaticket);
             }
         });
