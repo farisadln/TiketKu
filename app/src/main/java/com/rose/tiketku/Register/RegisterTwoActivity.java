@@ -1,4 +1,4 @@
-package com.rose.tiketku;
+package com.rose.tiketku.Register;
 
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.rose.tiketku.R;
 import com.squareup.picasso.Picasso;
 
 public class RegisterTwoActivity extends AppCompatActivity {
@@ -91,24 +92,39 @@ public class RegisterTwoActivity extends AppCompatActivity {
 
                 //verify
                 if (photo_location != null){
-                    StorageReference storageReferences =
-                            storage.child(System.currentTimeMillis() + "." + getFileExtension(photo_location));
+                    final StorageReference storageReferences =
+                            storage.child(System.currentTimeMillis() + "." +
+                                    getFileExtension(photo_location));
 
                     storageReferences.putFile(photo_location)
                             .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                                 @Override
                                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                    String uri_photo = taskSnapshot.getStorage().getDownloadUrl().toString();
-                                    reference.getRef().child("url_photo_profile").setValue(uri_photo);
-                                    reference.getRef().child("nama_lengkap").setValue(nama_lengkap.getText().toString());
-                                    reference.getRef().child("bio").setValue(bio.getText().toString());
+
+                                    storageReferences.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            String uri_photo = uri.toString();
+                                            reference.getRef().child("url_photo_profile").setValue(uri_photo);
+                                            reference.getRef().child("nama_lengkap").setValue(nama_lengkap.getText().toString());
+                                            reference.getRef().child("bio").setValue(bio.getText().toString());
+                                        }
+                                    }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Uri> task) {
+                                            Intent gosuccess = new Intent(RegisterTwoActivity.this, SuccessRegisterActivity.class);
+                                            startActivity(gosuccess);
+                                        }
+                                    });
+
+
 
                                 }
                             }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                            Intent gosuccess = new Intent(RegisterTwoActivity.this, SuccessRegisterActivity.class);
-                            startActivity(gosuccess);
+//                            Intent gosuccess = new Intent(RegisterTwoActivity.this, SuccessRegisterActivity.class);
+//                            startActivity(gosuccess);
                         }
                     });
                 }

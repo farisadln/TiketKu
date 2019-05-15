@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rose.tiketku.Register.RegisterOneActivity;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -42,6 +43,9 @@ public class SignInActivity extends AppCompatActivity {
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                btn_sign_in.setEnabled(false);
+                btn_sign_in.setText("Loading ...");
 
                 String username = xusername.getText().toString();
                 final String password = xpassword.getText().toString();
