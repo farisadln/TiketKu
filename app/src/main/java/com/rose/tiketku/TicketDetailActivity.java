@@ -83,8 +83,19 @@ public class TicketDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gocheckout = new Intent(TicketDetailActivity.this, TicketCheckoutActivity.class);
+                gocheckout.putExtra("jenis_tiket", jenis_tiket_baru);
                 startActivity(gocheckout);
             }
         });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goback = new Intent(TicketDetailActivity.this, HomeActivity.class);
+                startActivity(goback);
+            }
+        });
+
+
     }
 }
