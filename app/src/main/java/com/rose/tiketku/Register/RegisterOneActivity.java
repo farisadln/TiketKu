@@ -1,21 +1,21 @@
-package com.rose.tiketku;
+package com.rose.tiketku.Register;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rose.tiketku.R;
+import com.rose.tiketku.SignInActivity;
 
 public class RegisterOneActivity extends AppCompatActivity {
 
@@ -82,7 +82,7 @@ public class RegisterOneActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backtosignin = new Intent(RegisterOneActivity.this,SignInActivity.class);
+                Intent backtosignin = new Intent(RegisterOneActivity.this, SignInActivity.class);
                 startActivity(backtosignin);
             }
         });

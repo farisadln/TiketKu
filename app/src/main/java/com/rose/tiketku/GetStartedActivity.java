@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.rose.tiketku.Register.RegisterOneActivity;
+
 public class GetStartedActivity extends AppCompatActivity {
 
     Button btn_sign_in,btn_new_account;
