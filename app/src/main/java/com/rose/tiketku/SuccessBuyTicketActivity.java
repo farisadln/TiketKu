@@ -21,7 +21,7 @@ public class SuccessBuyTicketActivity extends AppCompatActivity {
         btn_view_ticket.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goview = new Intent(SuccessBuyTicketActivity.this, MyTicket.class);
+                Intent goview = new Intent(SuccessBuyTicketActivity.this, ProfileActivity.class);
                 startActivity(goview);
             }
         });
