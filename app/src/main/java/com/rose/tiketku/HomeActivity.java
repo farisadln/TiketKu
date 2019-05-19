@@ -77,6 +77,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        btn_to_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoprofile = new Intent(HomeActivity.this,ProfileActivity.class);
+                startActivity(gotoprofile);
+            }
+        });
+
         btn_ticket_pisa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
