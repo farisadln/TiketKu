@@ -12,7 +12,6 @@ import android.widget.TextView;
 import com.rose.tiketku.Items.Ticket;
 import com.rose.tiketku.MyTicket;
 import com.rose.tiketku.R;
-import com.rose.tiketku.TicketDetailActivity;
 
 import java.util.ArrayList;
 

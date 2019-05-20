@@ -1,15 +1,11 @@
-package com.rose.tiketku.Register;
+package com.rose.tiketku.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.rose.tiketku.HomeActivity;
 import com.rose.tiketku.R;
 
 public class SuccessRegisterActivity extends AppCompatActivity {

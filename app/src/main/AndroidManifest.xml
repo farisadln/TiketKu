@@ -13,17 +13,17 @@
         android:theme="@style/AppTheme">
         <activity android:name=".EditProfile"></activity>
         <activity android:name=".MyTicket" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".SuccessBuyTicketActivity" />
-        <activity android:name=".TicketCheckoutActivity" />
-        <activity android:name=".TicketDetailActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".Register.SuccessRegisterActivity" />
-        <activity android:name=".Register.RegisterTwoActivity" />
-        <activity android:name=".Register.RegisterOneActivity" />
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".GetStartedActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".Activities.ProfileActivity" />
+        <activity android:name=".Activities.SuccessBuyTicketActivity" />
+        <activity android:name=".Activities.TicketCheckoutActivity" />
+        <activity android:name=".Activities.TicketDetailActivity" />
+        <activity android:name=".Activities.HomeActivity" />
+        <activity android:name=".Activities.SuccessRegisterActivity" />
+        <activity android:name=".Activities.RegisterTwoActivity" />
+        <activity android:name=".Activities.RegisterOneActivity" />
+        <activity android:name=".Activities.SignInActivity" />
+        <activity android:name=".Activities.GetStartedActivity" />
+        <activity android:name=".Activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

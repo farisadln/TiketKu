@@ -1,4 +1,4 @@
-package com.rose.tiketku;
+package com.rose.tiketku.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,7 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rose.tiketku.Adapter.TicketAdapter;
+import com.rose.tiketku.EditProfile;
 import com.rose.tiketku.Items.Ticket;
+import com.rose.tiketku.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -86,7 +88,7 @@ public class ProfileActivity extends AppCompatActivity {
         btn_edit_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoeditprofile = new Intent(ProfileActivity.this,EditProfile.class);
+                Intent gotoeditprofile = new Intent(ProfileActivity.this, EditProfile.class);
                 startActivity(gotoeditprofile);
             }
         });
@@ -107,6 +109,30 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
+            }
+        });
+
+        btn_back_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotohome = new Intent(ProfileActivity.this,HomeActivity.class);
+                startActivity(gotohome);
+            }
+        });
+
+        btn_sign_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(username_key, null);
+                editor.apply();
+
+
+                Intent gohome = new Intent(ProfileActivity.this,SignInActivity.class);
+                startActivity(gohome);
+                finish();
             }
         });
     }
