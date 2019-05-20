@@ -1,4 +1,4 @@
-package com.rose.tiketku.Register;
+package com.rose.tiketku.Activities;
 
 import android.content.ContentResolver;
 import android.content.Intent;

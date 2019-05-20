@@ -12,6 +12,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rose.tiketku.Activities.ProfileActivity;
 
 public class MyTicket extends AppCompatActivity {
 
@@ -58,7 +59,7 @@ public class MyTicket extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoprofile = new Intent(MyTicket.this,ProfileActivity.class);
+                Intent gotoprofile = new Intent(MyTicket.this, ProfileActivity.class);
                 startActivity(gotoprofile);
             }
         });
